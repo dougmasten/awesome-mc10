@@ -1,0 +1,30 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: "14 3 * * 1"
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+    
+      - name: Install Awesome-bot 
+        run: gem install awesome_bot
+      
+      - name: Run Awesome-bot
+        run: awesome_bot README.md --allow-dupe --allow-redirect
+
