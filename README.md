@@ -19,3 +19,7 @@ This work is donated to the public domain under the [CC0 Public Domain Dedicatio
 ### Assemblers
 
 - [dasm](https://github.com/dasm-assembler/dasm) - Macro assembler with support for Motorola 6803.
+
+### Libraries
+
+- [zx0-6803](https://github.com/dougmasten/zx0-6803) - Data decompressor for the ZX0 data format
